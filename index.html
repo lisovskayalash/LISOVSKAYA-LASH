@@ -17,8 +17,10 @@
             font-family: 'Playfair Display', serif;
         }
 
+        /* Красивый фон на главной */
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/2000/1200');
+            background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), 
+                              url('https://images.unsplash.com/photo-1610992015730-2c4e5e9c5e4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -41,15 +43,6 @@
             transform: scale(1.06);
             filter: brightness(1.12);
         }
-
-        /* Мобильное меню */
-        .mobile-menu {
-            transform: translateY(-100%);
-            transition: transform 0.4s ease;
-        }
-        .mobile-menu.active {
-            transform: translateY(0);
-        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
@@ -58,14 +51,13 @@
     <nav class="bg-zinc-900 border-b border-zinc-800 fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white text-xl font-bold">👁️</div>
+                <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white text-xl font-bold">👁️</div>
                 <div>
-                    <span class="heading-font text-2xl font-semibold tracking-tight">LISOVSKAYA</span>
-                    <span class="text-xs block -mt-1 text-rose-400">LASH</span>
+                    <span class="heading-font text-2xl font-semibold tracking-tight text-white">LISOVSKAYA</span>
+                    <span class="text-xs block -mt-1 text-rose-400 font-medium">LASH</span>
                 </div>
             </div>
-
-            <!-- Desktop Menu -->
+           
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#home" class="hover:text-white transition-colors">Главная</a>
                 <a href="#services" class="hover:text-white transition-colors">Услуги</a>
@@ -74,28 +66,15 @@
                 <a href="#contact" class="hover:text-white transition-colors">Контакты</a>
             </div>
 
-            <div class="flex items-center gap-3">
-                <a href="https://vk.com/lisovskayalash" target="_blank" class="hidden sm:flex bg-zinc-800 hover:bg-zinc-700 px-4 py-2.5 rounded-2xl text-sm font-medium items-center gap-2">
-                    <i class="fa-brands fa-vk"></i>
+            <div class="flex gap-3">
+                <a href="https://vk.com/lisovskayalash" target="_blank" class="bg-zinc-800 hover:bg-zinc-700 px-5 py-3 rounded-2xl text-sm font-medium flex items-center gap-2">
+                    <i class="fa-brands fa-vk"></i> VK
                 </a>
                 <a href="https://t.me/lllisovskaya" target="_blank"
-                   class="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-5 py-2.5 rounded-2xl text-sm font-semibold flex items-center gap-2">
+                   class="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-6 py-3 rounded-2xl text-sm font-semibold flex items-center gap-2 hover:shadow-xl transition-all">
                     <i class="fa-brands fa-telegram"></i>
+                    Telegram
                 </a>
-                <button id="menuBtn" class="md:hidden text-3xl p-2">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="mobile-menu md:hidden bg-zinc-900 border-t border-zinc-800 px-6 py-8">
-            <div class="flex flex-col gap-6 text-lg font-medium">
-                <a href="#home" class="mobile-link">Главная</a>
-                <a href="#services" class="mobile-link">Услуги</a>
-                <a href="#portfolio" class="mobile-link">Работы</a>
-                <a href="#about" class="mobile-link">О мастере</a>
-                <a href="#contact" class="mobile-link">Контакты</a>
             </div>
         </div>
     </nav>
@@ -103,22 +82,22 @@
     <!-- HERO -->
     <section id="home" class="hero-bg h-screen flex items-center text-white pt-20">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-xl">
+            <div class="max-w-2xl">
                 <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full text-sm mb-6">
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     пгт Стожковское
                 </div>
                
-                <h1 class="heading-font text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-6">
+                <h1 class="heading-font text-7xl md:text-8xl font-bold leading-none mb-6 text-white">
                     Идеальные<br>ресницы<br>для тебя
                 </h1>
                
-                <p class="text-lg md:text-xl text-zinc-300 mb-10">
+                <p class="text-xl md:text-2xl text-zinc-300 mb-10">
                     Профессиональное наращивание ресниц<br>от Анастасии Лисовской
                 </p>
                
                 <a href="#contact"
-                   class="bg-white text-zinc-900 px-8 md:px-10 py-5 rounded-2xl font-semibold text-lg inline-flex items-center gap-3 hover:bg-rose-100 transition-all">
+                   class="bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg inline-flex items-center gap-3 hover:bg-rose-100 transition-all">
                     Записаться
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -182,7 +161,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <img src="https://sun9-16.userapi.com/s/v1/ig2/yn4AUoDz2qZbCmI2jlvUmfBj6m6udjzTFnMrNNfzjcns8tPRLaxavdD5MU7kyIaSD0XokUVqGIKK8LnBKEkld2vN.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1080x1441,1280x1708,1440x1921,1919x2560&from=bu&u=xEX237v3zoQ6wBqmtIlTYL7kpy9A69ItdMxKzAXmaHY&cs=1919x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 1">
                 <img src="https://sun9-87.userapi.com/s/v1/ig2/Zb86HuqaGbVUroz9R25EWuot2VQG92DqZOxX0V3oOhK2BvuxJwsy3fS0KUIinQ72NvX7nunxF7Nxx9fxDs-vr80b.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 2">
-                <img src="https://sun9-76.userapi.com/s/v1/ig2/iZyKkdx1_p1J6cBZfra6onR0ABb-5PQMjuaVKUrPKDdnL9lCs3KYX-xaByJqSqAovkrOzURuIMuqquZ8bEJv36Dm.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 3">
+                <img src="https://sun9-56.userapi.com/s/v1/ig2/hkcS8nYP3OSnzoTHH4-bxomt7-A8zDlQ3PaNY9VClmav1rTgMoktPZWbdBJU63A3UIPd7HUKCm82SaAPEM01L_aP.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1080x1441,1280x1708,1440x1921,1919x2560&from=bu&cs=1919x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 3">
                 <img src="https://sun9-56.userapi.com/s/v1/ig2/hkcS8nYP3OSnzoTHH4-bxomt7-A8zDlQ3PaNY9VClmav1rTgMoktPZWbdBJU63A3UIPd7HUKCm82SaAPEM01L_aP.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x854,720x960,1080x1441,1280x1708,1440x1921,1919x2560&from=bu&cs=1919x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 4">
                 <img src="https://sun9-16.userapi.com/s/v1/ig2/Y8BgdUMML2eW5WkTVY2O1MUlRnuXPg6FmJcAn-bnTNpnnch82MQexHoQXYUKoNqP13ykbPmhjlnjq_Bw3gImgE41.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 5">
                 <img src="https://sun9-68.userapi.com/s/v1/ig2/7kp7QP3cbT6vHPt-w98Y9LwMmQ-0HoGr5_HVZy0EbN7MZb8YjvFWUHl6cLHdR3ZUztyNasSiB58_2QMAzwuxM0eF.jpg?quality=95&crop=0,7,1697,2545&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,1080x1620,1280x1920,1440x2160,1697x2545&from=bu&cs=1697x0" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-2xl" alt="Работа 6">
@@ -203,6 +182,7 @@
                         <span class="text-rose-400 font-medium">МАСТЕР НАРАЩИВАНИЯ РЕСНИЦ</span>
                         <h2 class="heading-font text-5xl font-semibold mt-3 text-white">Анастасия Лисовская</h2>
                     </div>
+                   
                     <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
                         <p class="italic text-zinc-400">
                             «Каждая процедура — это создание взгляда, который подчёркивает вашу естественную красоту.»
@@ -248,26 +228,5 @@
         </div>
     </footer>
 
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            const icon = menuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        });
-
-        // Закрытие меню при клике на ссылки
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                const icon = menuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-xmark');
-            });
-        });
-    </script>
 </body>
 </html>
